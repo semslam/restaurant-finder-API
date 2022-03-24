@@ -21,7 +21,7 @@ const searchRestaurantsByParams = (res,params)=>{
 const restaurants = findBy(restaurant)
 
 if(params.orderPriority === "distance")
-    restaurants.sort((a, b)=>{return b.position - a.position});
+    restaurants.sort((a, b)=>{return a.position - b.position});
 else if(params.orderPriority === "rating")
     restaurants.sort((a, b)=>{return b.rating - a.rating});
     
