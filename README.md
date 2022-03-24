@@ -144,6 +144,24 @@ $ npm i express --save
 ```
 $ npm i nodemon jest supertest --save-dev
 ```
+### Test case
+1. Should create a restaurant given valid parameters
+2. Should return code 400 when name is missing or empty
+3. Should return code 400 when position is missing or empty
+4. Should return code 400 when position is greater than 200
+5. Should return code 400 when position is negative
+6. Should return code 400 when rating is grater than 5
+7. Should return code 400 when rating is lower than 1
+8. Should return code 400 when trying to send two restaurants with same position
+9. Should get Restaurants in the right order, given orderPriority is rating
+10. Should get Restaurants in the right order, given orderPriority is distance
+11. Should get Restaurants without restaurants outside default distance limit 30
+12. Should get Restaurants without restaurants with a non selected category
+13. Should return 400 when calling get restaurants without all mandatory attributes
+14. Should return 400 when calling get restaurants without a wrong orderPriority
+15. Should return 400 when calling get restaurants without non intenger distance limit
+16. Should return 400 when calling get restaurants without integer outside range
+17. Should return 400 when calling get restaurants without a position that belongs to an restaurant
 ### Code Organization and best practices
 Your code may be evaluated manually in the future. Make sure you keep your code clean and understandable as if it were a real-life program. Project your code thinking about a production environment.
 

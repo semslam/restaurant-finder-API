@@ -98,7 +98,7 @@ describe("Restaurant Finder", () => {
             "category": "Pizza",
             "rating": 5
         }
-
+       
         const createResponse = await makeRegularPostRequest(requestBody); 
         try {
             expect(createResponse.status).toEqual(400);
@@ -118,7 +118,7 @@ describe("Restaurant Finder", () => {
             "category": "Pizza",
             "rating": 6
         }
-
+        
         const createResponse = await makeRegularPostRequest(requestBody); 
         try {
             expect(createResponse.status).toEqual(400);
@@ -138,7 +138,7 @@ describe("Restaurant Finder", () => {
             "category": "Pizza",
             "rating": 6
         }
-
+       
         const createResponse = await makeRegularPostRequest(requestBody); 
         try {
             expect(createResponse.status).toEqual(400);
@@ -158,7 +158,7 @@ describe("Restaurant Finder", () => {
             "category": "Pizza",
             "rating": -1
         }
-
+        
         const createResponse = await makeRegularPostRequest(requestBody); 
         try {
             expect(createResponse.status).toEqual(400);
@@ -178,6 +178,7 @@ describe("Restaurant Finder", () => {
             "category": "Pizza",
             "rating": 2
         }
+        
         await makeRegularPostRequest(requestBody);
         const createResponse = await makeRegularPostRequest(requestBody); 
         try {
@@ -212,7 +213,7 @@ describe("Restaurant Finder", () => {
             "distanceLimit": 50,
             "position": 94
         }
-
+        
         await makeRegularPostRequest(requestBody);
         await makeRegularPostRequest(anotherRequestBody);
 
@@ -235,7 +236,7 @@ describe("Restaurant Finder", () => {
             "category": "Pizza",
             "rating": 1
         }
-
+        
         const anotherRequestBody = {
             "name": "1234",
             "position": 120,
@@ -285,7 +286,7 @@ describe("Restaurant Finder", () => {
             "orderPriority": "distance",
             "position": 94
         }
-
+        
         await makeRegularPostRequest(requestBody);
         await makeRegularPostRequest(anotherRequestBody);
 
@@ -330,7 +331,7 @@ describe("Restaurant Finder", () => {
             "distanceLimit": 80,
             "position": 94
         }
-
+        
         await makeRegularPostRequest(requestBody);
         await makeRegularPostRequest(anotherRequestBody);
         await makeRegularPostRequest(thirdRequestBody);
@@ -355,7 +356,6 @@ describe("Restaurant Finder", () => {
             "distanceLimit": 80,
             "position": 94
         }
-
         const restaurants = await makeRegularGetRequest(getRestaurantsBody);
 
         try {
@@ -373,7 +373,7 @@ describe("Restaurant Finder", () => {
             "distanceLimit": 80,
             "position": 94
         }
-
+       
         const restaurants = await makeRegularGetRequest(getRestaurantsBody);
 
         try {
@@ -391,7 +391,7 @@ describe("Restaurant Finder", () => {
             "distanceLimit": "distance",
             "position": 94
         }
-
+        
         const restaurants = await makeRegularGetRequest(getRestaurantsBody);
 
         try {
@@ -409,7 +409,7 @@ describe("Restaurant Finder", () => {
             "distanceLimit": 120,
             "position": 230
         }
-
+        
         const restaurants = await makeRegularGetRequest(getRestaurantsBody);
 
         try {
@@ -428,7 +428,7 @@ describe("Restaurant Finder", () => {
             "category": "Pizza",
             "rating": 1
         }
-
+        
         const getRestaurantsBody = {
             "category": "Burguer",
             "orderPriority": "distance",
