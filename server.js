@@ -1,6 +1,5 @@
 
-const app = require("./app")
-
+const app = require("./app");
 app.get("/", (req, res) => {
     res.status(200).send({ message: "Welcome to restaurant finder API" })
    
@@ -12,8 +11,8 @@ app.get("/", (req, res) => {
         message: "Not Found"
         })
   });
-  
-  const PORT =  6000;
+
+  const PORT =  3000;
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
   });
